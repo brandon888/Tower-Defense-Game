@@ -1,0 +1,107 @@
+M4
+
+Everytime we added a new feature to the game we tested it manually in the game, looking at edge cases and then wrote a
+unit test. We kept doing this throughout the development process, we then filled in the gaps at the end with some more
+test cases. We also discussed as a group at the end to make sure we covered all possibilities for our game to make sure
+all cases were handled
+
+1. Test written to check whether the game restarted once monument health was zero, this test made sure the game over
+method was being called at the right time and that it worked, this is verified by checking for the game over screen
+when monument health is set to 0
+
+2. Test written to check whether restarting the game works. In this test we are checking whether the game over screen
+is functional and that it allows the game to be restarted. Once monument health is set to zero, we restart the game and
+then verify the game has been started by scanning the page and making sure the correct map is present
+
+3. Test written to check whether restarting the game from a wave death(death by enemies) works. In this test we are
+checking that once monument health hits zero from enemies we are sent to the game over screen and that we can restart
+the game from there. To verify this we click the "wave" button till monument has zero health we then check for
+ presence of the game over screen and then once we hit restart we scan for the map
+
+4. Test written to check whether enemy has right damage on easy mode. In this test we are a checking that the enemy
+does the correct amount of damage to monument in this mode. We are testing the method that logs damage to monument
+and verifying it's providing the right information to the user. We do this by verifying the monument health is
+displayed as 988 after a single enemy
+
+5. Test written to check whether enemy has right damage on medium mode. In this test we are a checking that the enemy
+does the correct amount of damage to monument in this mode. We are testing the method that logs damage to monument
+and verifying it's providing the right information to the user. We do this by verifying the monument health is
+displayed as 875 after a single enemy
+
+6. Test written to check whether enemy has right damage on hard mode. In this test we are a checking that the enemy
+does the correct amount of damage to monument in this mode. We are testing the method that logs damage to monument
+and verifying it's providing the right information to the user. We do this by verifying the monument health is
+displayed as 763 after a single enemy
+
+7. Test written to check whether wave counter is accurate once "Unleash the horde button is pressed!". In this test we
+are checking that the counter and the methods that update the counter are working. To verify this we click the button
+thrice and after each we check the information displayed to the user is correct
+
+8. Test written to check whether wave death works correctly on easy mode, that once enough damage has been accrued we
+reach the game over screen. In this test we make sure in easy mode the damage counter is correct and that monument
+death triggers the game over screen. To verify this we send 7 waves to send health to zero and then check whether we have
+reached the game over screen
+
+9. Test written to check whether wave death works correctly on medium mode, that once enough damage has been accrued we
+reach the game over screen. In this test we make sure in easy mode the damage counter is correct and that monument
+death triggers the game over screen. To verify this we send 5 waves to send health to zero and then check whether we have
+reached the game over screen
+
+10. Test written to check whether wave death works correctly on hard mode, that once enough damage has been accrued we
+reach the game over screen. In this test we make sure in easy mode the damage counter is correct and that monument
+death triggers the game over screen. To verify this we send 4 waves to send health to zero and then check whether we
+have reached the game over screen
+
+M5
+
+Testing procedure was largely the same as in M4, we wrote tests as we added functionality and made sure those components
+were working before proceeding
+
+There were five main features we wanted to test in this milestone. We firstly wanted to check the additional enemies
+were created, distinguishable and acted like expected. Secondly we wanted to check that the different towers did damage
+to the enemies when in proximity. Thirdly we wanted to check that the towers could kill the enemies. Fourthly that the
+player received money back for killing enemies and lastly enemies showed visible damage
+
+To test the first case, we spawned a certain enemy and checked how it interacted with the game. This was done through a
+visual check and also how much damage it did to the monument when it reached there. This we could validate, we checked
+all three enemy types like so.
+
+For the second case we are testing the combat part of this milestone, to dp this we placed different towers and then
+checked if the expected damage was done on the enemies as expected. Ww could do this by reading the enemies health, we
+did this for every tower type to make sure they all worked
+
+Thirdly we wanted to check that enemies could die and disappear off the page, this was easy to do, we loaded enough
+towers in to kill the enemies and then first checked the enemies were not on the map and secondly that there was no
+damage done to the monument, we did this for all three tower types
+
+Fourthly we wanted to test the feature that players received money back for killing enemies, this was also easy to do,
+upon placing towers we validated how much money the player had, after the enemies spawned and were killed we checked the
+money in the bank to the expected value.
+
+Last but not least, showing damage was done by checking there was in image file path change, when the enemies received
+sufficient damage, this was done by putting an enemy through a designed maze and checking the image at certain points
+
+M6
+Once again, we focused on adding tests that corresponded to added functionality in order to verify that everything was 
+working as intended.
+
+We first tested the updated game over screen and victory screen. To test the game over screen, we rewrote the original 
+test from an earlier milestone. We then verified that the stats and game over text were displayed on the screen. For the 
+victory screen, we called a method that simulates a victory and verified that the stats and victory text were displayed 
+on the screen. We also tested that the functionality of the screen works for the victory, namely that a player can reset 
+the screen from victory and will be shown the main menu screen. This last test works slightly differently in that it 
+simulates the final wave of enemies by forcing the wave to be the max wave. 
+
+We then tested the general functionality of upgrading towers. We first check if, by placing a tower of the same type on a 
+tower, the tower's level is upgraded, or in other words, the tower's level is 2 when upgraded once. We also checked the 
+system of repeated upgrades by repeatedly upgrading a tower and checking if the tower's level corresponds to the expected 
+level. In the method, we expect it to be at level 10. We also checked that towers still can't be placed on other types of 
+towers, which preserves the old functionality of being unable to place towers on towers.
+
+We also tested the functionality of tracking the statistics. We have a method to test that the money being spent is tracked 
+accurately by checking the money after spending a certain amount. We also have a couple of methods to track the most upgraded 
+tower, by checking that when there are no towers, the max upgrade level is 0, and placing multiple level 1 towers and one 
+level 3 tower to make sure the max upgrade level is 3. The assertion we are checking is the same one shown on the victory screen.
+
+Finally, we tested that the final boss will appear on the final wave by verifying that the final boss is present on the game screen 
+when the wave is the final wave.

@@ -1,0 +1,68 @@
+
+                //while (!enemySpawnList.isEmpty()) {
+                //moveAllPlaced(placedEnemies, toBeRemoved);
+//                Enemy curEnemy = enemySpawnList.remove(0);
+//                curEnemy.setPPIndex(0);
+//                z = pathPath[curEnemy.getPPIndex()];
+//                y = z[0];
+//                x = z[1];
+//                tiles[y][x].putEnemy(curEnemy);
+//                tiles[y][x].updateDisplay();
+//                placedEnemies.add(0, curEnemy);
+//                Thread.sleep(1000);
+//            }
+
+//
+//            Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.1), ev -> {
+//                moveAllPlaced(placedEnemies, toBeRemoved);
+//                updateBool(placedEnemies, toBeRemoved, noMoreEnemies);
+//                System.out.println("Placed " + placedEnemies.size() + "Removed: " + toBeRemoved.size());
+//                System.out.println(noMoreEnemies);
+//            }, new KeyValue(noMoreEnemies, true)));
+//
+//            //final KeyValue kv = new KeyValue(noMoreEnemies(placedEnemies, toBeRemoved), true);
+//            timeline.setCycleCount(1);
+//            timeline.play();
+
+
+//                    System.out.println("Placed " + placedEnemies.size() + "Removed: " + toBeRemoved.size());
+//                    System.out.println(noMoreEnemies);
+
+
+//        while (!enemySpawnList.isEmpty()) {
+//            int[] z = pathPath[0];
+//            int x = z[0];
+//            int y = z[1];
+//            MapTile thisTile = tiles[y][x];
+//            if (!thisTile.isEnemy()) {
+//                Enemy curEnemy = enemySpawnList.remove(0);
+//                curEnemy.setPPIndex(0);
+//                //curEnemy.incrementPPIndex();
+//                z = pathPath[curEnemy.getPPIndex()];
+//                y = z[0];
+//                x = z[1];
+//                tiles[y][x].putEnemy(curEnemy);
+//                tiles[y][x].updateDisplay();
+//                Thread.sleep(1000);
+//                while(timer) {
+//
+//                }
+//                if (next tile in pp index is monumenet) {
+//                    damageMonument(curEnemy.getEnemyDamage());
+//                    curEnemy.kill();
+//                    z = pathPath[curEnemy.getPPIndex()];
+//                    y = z[0];
+//                    x = z[1];
+//                    btns[y][x].removeEnemy(curEnemy);
+//                    btns[y][x].updateDisplay();
+//                    updateStats();
+//                } else if (next tile in pp index is not an enemy) {
+//                    curEnemy.incrementPPIndex();
+//                    z = pathPath[curEnemy.getPPIndex()];
+//                    y = z[0];
+//                    x = z[1];
+//                    btns[y][x].putEnemy(curEnemy);
+//                    btns[y][x].updateDisplay();
+//                }
+//                //@TODO find a way to do this for the previous enemies
+//
