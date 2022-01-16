@@ -12,7 +12,7 @@ An interative development process consisting of six milestones each with extensi
 
 **Use Case (Early Stages)**
 
-<img src="https://user-images.githubusercontent.com/51475015/149680331-52f3a9b0-8039-45f5-a163-80eea2b8c731.png" width="500" />
+<img src="https://user-images.githubusercontent.com/51475015/149680477-c4f469a8-a43f-4bbd-b70c-0b0a3b04c878.png" width="500" />
 
 **Class Diagram (Early Stages)**
 
