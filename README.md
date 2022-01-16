@@ -8,4 +8,5 @@ A simple tower defense game written in JavaFX. Collaborative effort of 5 team me
 
 An interative development process consisting of six milestones each with extensive planning and diagramming.
 
-<img src="https://user-images.githubusercontent.com/51475015/149680274-3ecc2a48-089f-488b-8bb2-1f70b4305e92.png">
+## Diagrams
+![image](https://user-images.githubusercontent.com/51475015/149680331-52f3a9b0-8039-45f5-a163-80eea2b8c731.png | width = 100)
